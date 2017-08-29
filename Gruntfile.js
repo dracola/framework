@@ -375,7 +375,7 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask("makePackage", ["exec:php_readme_gen", "packman"])
-    grunt.registerTask("jsrf:compile", ["jst:jsrf", "themegen:jsrf", "less:jsrf"]);
+    grunt.registerTask("jsrf:compile", []);
     grunt.registerTask("build:jsrf", ["clean:jsrf", "jst:jsrf", "requirejs", "file_append:jsrf_version", "themegen:jsrf", "less:jsrf", "cssmin:jsrf", "copyto:jsrf_img", "packman:js_build"]);
     grunt.registerTask("build:examples", ["copyto:examples"]);
     grunt.registerTask("build:phprf", ["packman:php_build"]);
