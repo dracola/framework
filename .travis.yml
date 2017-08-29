@@ -7,5 +7,6 @@ before_install:
   - sudo apt-get install -t trusty php5-cli
 before_script:
   - npm install grunt-cli -g
+  - npm install
 script:
 - npm build
