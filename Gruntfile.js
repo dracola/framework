@@ -5,8 +5,8 @@ module.exports = function(grunt) {
     // Options for builds, usually specified by 
     var opts = {
         channel: grunt.option("channel") || "1",
-        versionNumber: grunt.option ("versionNumber") || "1",
-        betaNumber: grunt.option("betaNumber") || "0",
+        versionNumber: grunt.option("versionNumber") || "0",
+        betaNumber: grunt.option("betaNumber") || "12",
         versionString: ""
     };
 
@@ -350,8 +350,8 @@ module.exports = function(grunt) {
             cwd: "tools/licenses/generator"
         }
         // addPackageWithLicense(version, "trial");
-        // addPackageWithLicense(version, "standard");
-        addPackageWithLicense(version, "pro");
+        addPackageWithLicense(version, "standard");
+        // addPackageWithLicense(version, "pro");
         // addPackageWithLicense(version, "devdirect");
     };
 
@@ -382,7 +382,7 @@ module.exports = function(grunt) {
     grunt.registerTask("build:code", ["build:jsrf", "build:phprf", "replace:removeAMD"]);
     grunt.registerTask("build:website", ["copyto:website", "squashDemos", "extGrunt:website"]);
     grunt.registerTask("build:docs", ["extGrunt:docs"]);
-    grunt.registerTask("build", ["build:code", "build:website", "build:examples", "build:website", "build:docs"]);
+    grunt.registerTask("build", ["build:code"]);
     grunt.registerTask("package", ["clean:build", "build", "makePackage", "versionWriter"]);
     grunt.registerTask("upload", ["s3:upload_package"]);
     grunt.registerTask("test:wrappers", ["exec:casperphp"]);
