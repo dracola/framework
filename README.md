@@ -1,4 +1,4 @@
-# RazorFlow Framework
+# RazorFlow Framework              [![Build Status](https://travis-ci.org/mohammedmatar/framework.svg?branch=master)](https://travis-ci.org/mohammedmatar/framework)
 Forked basicly from: [ go to original repo ](https://github.com/razorflow/framework)
 
 [ download ](https://github.com/mohammedmatar/framework/releases)
