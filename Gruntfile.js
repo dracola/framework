@@ -349,9 +349,9 @@ module.exports = function(grunt) {
             // stdout: true, // Set this to true to debug genreadmes
             cwd: "tools/licenses/generator"
         }
-        addPackageWithLicense(version, "trial");
+        // addPackageWithLicense(version, "trial");
         // addPackageWithLicense(version, "standard");
-        // addPackageWithLicense(version, "pro");
+        addPackageWithLicense(version, "pro");
         // addPackageWithLicense(version, "devdirect");
     };
 
@@ -371,10 +371,10 @@ module.exports = function(grunt) {
             },
             args: [options.task]
         }, done)
-    })
+    });
 
 
-    grunt.registerTask("makePackage", ["exec:php_readme_gen", "packman"])
+    grunt.registerTask("makePackage", ["exec:php_readme_gen", "packman"]);
     grunt.registerTask("jsrf:compile", ["jst:jsrf", "themegen:jsrf", "less:jsrf"]);
     grunt.registerTask("build:jsrf", ["clean:jsrf", "jst:jsrf", "requirejs", "file_append:jsrf_version", "themegen:jsrf", "less:jsrf", "cssmin:jsrf", "copyto:jsrf_img", "packman:js_build"]);
     grunt.registerTask("build:examples", ["copyto:examples"]);
@@ -386,7 +386,7 @@ module.exports = function(grunt) {
     grunt.registerTask("package", ["clean:build", "build", "makePackage", "versionWriter"]);
     grunt.registerTask("upload", ["s3:upload_package"]);
     grunt.registerTask("test:wrappers", ["exec:casperphp"]);
-    grunt.registerTask("quickbuild", ["clean:build", "build:code", "makePackage", "versionWriter"]).ok();
+    grunt.registerTask("quickbuild", ["clean:build", "build:code", "makePackage", "versionWriter"]);
 
 
     grunt.loadNpmTasks('grunt-contrib-clean');
