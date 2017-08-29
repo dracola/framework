@@ -4,8 +4,8 @@ var _ = require("underscore");
 module.exports = function(grunt) {
     // Options for builds, usually specified by 
     var opts = {
-        channel: grunt.option("channel") || "unstable",
-        versionNumber: grunt.option ("versionNumber") || "unstable",
+        channel: grunt.option("channel") || "1",
+        versionNumber: grunt.option ("versionNumber") || "1",
         betaNumber: grunt.option("betaNumber") || "0",
         versionString: ""
     };
