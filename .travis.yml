@@ -11,10 +11,11 @@ before_script:
 - npm install
 script:
 - grunt build
+- zip build -b razorflow.zip
 deploy:
   provider: releases
   api_key:
     secure: b1ZjsHi5ElaaDrpc2oDuV1Wjuyd0a/31v9OHEwuxM9MzOH+qY46iW6TPVlEE5dgrTysE3Hb3r8eXhxh5HBxtwydJLxqaxRL6WvUTceGDXztY6gD32C7ofFsSksSrc2LG+s7yU7F57UAEh79uNwXmlrCLGiU+F9rOn2NKjZX2LbN+x9LE7/iCKMBY1ZVLcNRSAxwyjSPlwx++ckv8dOMaQkxcwpqIzdu34dOANgmOGNdQI7EFR7lHfJH9tjTONWjgF7a32tAtSYazuXXVWlOehjOWN7a510V4Hg39I/VdLAZ2tdo19+Q3HiUzBkIDgLsgVdFwGVUloV2Bxd8+zG8QtqdiKojptM3U5CGvxBWX6mabPEf0A/Qdk1pQL7zMIK/+NZKobfZUvA56jvWM4exfGvF5RXn3yTEevduJMRzeEu8vTeeM442WDItN2RKCMO5yopTHuJ+xthKccQCNd5radRNIBbvR6lhXkro9HXFfvSIhaJ/NQv9/zqCF4qBlRSmW9TiIiWj7HiHvnoMJtr37rg9YDGJQsxYroFa3x/LB4o8QGUckuY685fSRxPHj2/OYLtdEXfa+8AjBnyaREClL7nWV+5242aMHnLLvLwOXuB2cK6z8QtKvBjxZKV7eHvnS7KqeyslP+v5NyovT6Z14pr+IsFZdnU87IxL08b7GDYk=
-  file: razorflow.tar.xz
+  file: razorflow.zip
   on:
     repo: mohammedmatar/framework
