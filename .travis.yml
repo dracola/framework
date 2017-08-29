@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "6.11.2"
+before_install:
+  - sudo add-apt-repository "deb mirror://mirrors.ubuntu.com/mirrors.txt trusty main restricted universe multiverse" -y
+  - sudo apt-get update -qq
+  - sudo apt-get install -t trusty php5-cli
+before_script:
+  - npm install grunt-cli -g
+script:
+- npm build
