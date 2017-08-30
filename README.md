@@ -5,7 +5,7 @@ Forked basicly from: [ go to original repo ](https://github.com/razorflow/framew
 ## Setup
 
 ```
-git clone git://github.com/razorflow/framework.git
+git clone https://github.com/mohammedmatar/framework.git
 cd framework
 npm install
 grunt build
